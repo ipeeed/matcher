@@ -1,0 +1,22 @@
+<header class="mb-4">
+  <nav class="navbar navbar-expand-sm navbar-dark bg-info py-3">
+    <a class="navbar-brand" href="/">Matcher</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <% if logged_in_as_owner %>
+          <li class="nav-item"><%= link_to 'Dashboard', owner_path(current_owner), class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Log out', logout_path, method: :delete, class: 'nav-link' %></li>
+        <% elsif logged_in_as_transporter %>
+          <li class="nav-item"><%= link_to 'Dashboard', transporter_path(current_transporter), class: 'nav-link' %></li>
+          <li class="nav-item"><%= link_to 'Log out', logout_path, method: :delete, class: 'nav-link' %></li>
+        <% else %>
+          <%= link_to 'Log in', login_path, class: 'nav-item nav-link text-white' %>
+        <% end %>
+      </ul>
+    </div>
+  </nav>
+</header>

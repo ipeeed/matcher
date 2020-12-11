@@ -1,0 +1,20 @@
+<% if logged_in_as_owner %>
+  <p>Logged in as owner</p>
+
+<% elsif logged_in_as_transporter %>
+  <p>Logged in as transporter</p>
+  
+<% else %>
+  <div class="row jumbotron h-100 py-3">
+    <a href="<%= signin_owner_path %>" class="col-sm-6 text-center text-decoration-none text-info pt-5 h-100" style="border-right: 1px solid black;">
+  
+        <h1>Optimize your distribution</h1>
+        <h3>by discovering transporters with us</h3>
+  
+    </a>
+    <a href="<%= signin_transporter_path %>" class="col-sm-6 text-center text-decoration-none text-info pt-5 h-100">
+        <h1>Maximize your trucking-asset-performance</h1>
+        <h3>by discovering clients with us</h3>
+    </a>
+  </div>
+<% end %>

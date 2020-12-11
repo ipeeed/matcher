@@ -4023,6 +4023,11 @@ jest-worker@^25.4.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
+jpn.css@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/jpn.css/-/jpn.css-1.0.1.tgz#872c21304d9d5754b35cadd12e46339767a91c2a"
+  integrity sha1-hywhME2dV1SzXK3RLkYzl2epHCo=
+
 js-base64@^2.1.8:
   version "2.6.4"
   resolved "https://registry.yarnpkg.com/js-base64/-/js-base64-2.6.4.tgz#f4e686c5de1ea1f867dbcad3d46d969428df98c4"
